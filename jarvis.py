@@ -5,15 +5,11 @@ import wikipedia
 import os
 import webbrowser
 import google.generativeai as genai
-import pywhatkit as py
-
-API_KEY = "AIzaSyB5D3iPLpLK2PcZwyu93DnT5PhFS7YWYCk"
 
 def speak(audio):
     initiate = pyttsx3.init()
     initiate.say(audio)
     initiate.runAndWait()
-
 
 def wishme():
     hour = int(datetime.datetime.now().hour)
@@ -58,17 +54,12 @@ while True:
     elif 'valorant' in query:
         os.startfile("C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Riot Games\VALORANT.lnk")
         
-
     elif "open google" in query:
         webbrowser.open("https://google.com")
 
     elif "open youtube" in query:
         webbrowser.open("https://youtube.com")
 
-    elif 'Harsh' in query:
-        py.sendwhatmsg(f"+919136875629",{query},22,)
-        print("Message Sent!")
-        speak("Message Sent!")
     elif 'stop' in query:
         break
     else:
